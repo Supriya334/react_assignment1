@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React_asign_3</title>
+</head>
+<body>
+
+<div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   
+
+</body>
+</html>
+<script type="text/babel">
+let root=document.getElementById("root");
+
+let rootElement=ReactDOM.createRoot(root);
+
+
+let props={
+    Border:'1px solid black',
+    width:'60%',
+    backgroundColor:'pink',
+    margin:'auto',
+    display:'flex',
+    fontWeight:'bold',
+    fontSize:'30px',
+    padding:'80px',
+    gap:'40px'
+
+}
+
+let child1={
+    backgroundColor:'red',
+    height:'100px',
+    width:'100px'
+}
+
+
+let child2={
+    backgroundColor:'yellow',
+    height:'100px',
+    width:'100px'
+}
+
+let child3={
+    backgroundColor:'green',
+    height:'100px',
+    width:'100px'
+}
+
+let child4={
+    backgroundColor:'blue',
+    height:'100px',
+    width:'100px'
+}
+
+
+
+
+let flex=React.createElement("div",{id:"parent",style:props},
+
+// style should be writtern in smal letters otherwise it will throw error
+
+[
+React.createElement("p",{style:{marginTop:"-30px"}},"parent"),
+    React.createElement("div",{style:child1},"child 1"),
+    React.createElement("div",{style:child2},"child 2"),
+    React.createElement("div",{style:child3},"child 3"),
+    React.createElement("div",{style:child4},"child 4")
+    
+
+
+])
+
+// let data= <p> Hello form react</p>
+
+rootElement.render(flex);
+
+</script>
